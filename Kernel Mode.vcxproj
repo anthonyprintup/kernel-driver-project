@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-Debug-Info|x64">
+      <Configuration>Release-Debug-Info</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{86aeb7e7-e30e-4834-9bd2-f92c744b69e0}</ProjectGuid>
+    <TemplateGuid>{1bc93793-694f-48fe-9372-81e2b05556fd}</TemplateGuid>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration>Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">Win32</Platform>
+    <RootNamespace>Kernel_Mode</RootNamespace>
+    <WindowsTargetPlatformVersion>$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <TargetVersion>Windows10</TargetVersion>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>KMDF</DriverType>
+    <DriverTargetPlatform>Universal</DriverTargetPlatform>
+    <ALLOW_DATE_TIME>1</ALLOW_DATE_TIME>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <TargetVersion>Windows10</TargetVersion>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>KMDF</DriverType>
+    <DriverTargetPlatform>Universal</DriverTargetPlatform>
+    <ALLOW_DATE_TIME>1</ALLOW_DATE_TIME>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-Debug-Info|x64'" Label="Configuration">
+    <TargetVersion>Windows10</TargetVersion>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>KMDF</DriverType>
+    <DriverTargetPlatform>Universal</DriverTargetPlatform>
+    <ALLOW_DATE_TIME>1</ALLOW_DATE_TIME>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <TargetName>$(ProjectName)-$(Configuration)</TargetName>
+    <OutDir>$(SolutionDir)builds\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)builds\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)dependencies\includes;$(SolutionDir)dependencies\includes\libtommath;$(SolutionDir)dependencies\includes\libtomcrypt;$(SolutionDir)submodules\Ceanko\Framework\Framework\include;$(VC_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)dependencies\libraries;$(SolutionDir)dependencies\libraries\Code Virtualizer;$(DDK_LibraryPath_DDKPlatform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <TargetName>$(ProjectName)-$(Configuration)</TargetName>
+    <OutDir>$(SolutionDir)builds\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)builds\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)dependencies\includes;$(SolutionDir)dependencies\includes\libtommath;$(SolutionDir)dependencies\includes\libtomcrypt;$(SolutionDir)submodules\Ceanko\Framework\Framework\include;$(VC_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)dependencies\libraries;$(SolutionDir)dependencies\libraries\Code Virtualizer;$(DDK_LibraryPath_DDKPlatform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-Debug-Info|x64'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <TargetName>$(ProjectName)-$(Configuration)</TargetName>
+    <OutDir>$(SolutionDir)builds\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)builds\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)dependencies\includes;$(SolutionDir)dependencies\includes\libtommath;$(SolutionDir)dependencies\includes\libtomcrypt;$(SolutionDir)submodules\Ceanko\Framework\Framework\include;$(VC_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)dependencies\libraries;$(SolutionDir)dependencies\libraries\Code Virtualizer;$(DDK_LibraryPath_DDKPlatform);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <WarningLevel>Level2</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+      <PreprocessorDefinitions>KERNEL_MODE;BUILD_$(Configuration.toUpper());LTC_NO_FILE;LTC_NO_TEST;LTM_DESC;MP_NO_FILE;NDEBUG;_HAS_STATIC_RTTI=0;_NO_CRT_STDIO_INLINE;_WIN64;_AMD64_;AMD64;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+      <AdditionalDependencies>$(DDK_LIB_PATH)libcntpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <MapFileName>$(SolutionDir)builds\$(ProjectName)\$(ProjectName)-$(Configuration).map</MapFileName>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <WarningLevel>Level2</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+      <PreprocessorDefinitions>KERNEL_MODE;BUILD_$(Configuration.toUpper());LTC_NO_FILE;LTC_NO_TEST;LTM_DESC;MP_NO_FILE;NDEBUG;_HAS_STATIC_RTTI=0;_HAS_EXCEPTIONS=0;_NO_CRT_STDIO_INLINE;_WIN64;_AMD64_;AMD64;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+      <AdditionalDependencies>$(DDK_LIB_PATH)libcntpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <MapFileName>$(SolutionDir)builds\$(ProjectName)\$(ProjectName)-$(Configuration).map</MapFileName>
+      <AdditionalOptions>/DEBUG:NONE %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile />
+      <Profile>false</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-Debug-Info|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <WarningLevel>Level2</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+      <PreprocessorDefinitions>KERNEL_MODE;BUILD_$(Configuration.toUpper());LTC_NO_FILE;LTC_NO_TEST;LTM_DESC;MP_NO_FILE;NDEBUG;_HAS_STATIC_RTTI=0;_HAS_EXCEPTIONS=0;_NO_CRT_STDIO_INLINE;_WIN64;_AMD64_;AMD64;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+      <AdditionalDependencies>$(DDK_LIB_PATH)libcntpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <MapFileName>$(SolutionDir)builds\$(ProjectName)\$(ProjectName)-$(Configuration).map</MapFileName>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <FilesToPackage Include="$(TargetPath)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libc\Memory.cpp" />
+    <ClCompile Include="libc\stdlib\At Exit.cpp" />
+    <ClCompile Include="libc\stdlib\Exceptions\Assertions.cpp" />
+    <ClCompile Include="libc\stdlib\Exceptions\Exceptions.cpp" />
+    <ClCompile Include="libc\stdlib\STD.cpp" />
+    <ClCompile Include="libtom\crypt\ciphers\aes\aes.c" />
+    <ClCompile Include="libtom\crypt\ciphers\aes\aes_tab.c" />
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_add_aad.c" />
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_add_iv.c" />
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_done.c" />
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_gf_mult.c" />
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_init.c" />
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_memory.c" />
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_mult_h.c" />
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_process.c" />
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_reset.c" />
+    <ClCompile Include="libtom\crypt\hashes\helper\hash_memory.c" />
+    <ClCompile Include="libtom\crypt\hashes\helper\hash_memory_multi.c" />
+    <ClCompile Include="libtom\crypt\hashes\sha1.c" />
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha224.c" />
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha256.c" />
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha384.c" />
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha512.c" />
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha512_224.c" />
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha512_256.c" />
+    <ClCompile Include="libtom\crypt\hashes\sha3.c" />
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_done.c" />
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_init.c" />
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_memory.c" />
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_memory_multi.c" />
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_process.c" />
+    <ClCompile Include="libtom\crypt\math\ltm_desc.c" />
+    <ClCompile Include="libtom\crypt\math\multi.c" />
+    <ClCompile Include="libtom\crypt\math\rand_bn.c" />
+    <ClCompile Include="libtom\crypt\math\rand_prime.c" />
+    <ClCompile Include="libtom\crypt\misc\base64\base64_decode.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_cipher_descriptor.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_cipher_is_valid.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_hash_descriptor.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_hash_is_valid.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_inits.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_ltc_mp_descriptor.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_prng_descriptor.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_prng_is_valid.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_register_cipher.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_register_hash.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_register_prng.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_unregister_cipher.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_unregister_hash.c" />
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_unregister_prng.c" />
+    <ClCompile Include="libtom\crypt\misc\mem_neq.c" />
+    <ClCompile Include="libtom\crypt\misc\zeromem.c" />
+    <ClCompile Include="libtom\crypt\pk\asn1\oid\pk_oid_str.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_free.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_get_key.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_get_size.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_make_key.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_set_curve.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_set_curve_internal.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_set_key.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_shared_secret.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_sizes.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_export_point.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_import_point.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_is_point.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_is_point_at_infinity.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_map.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_mul2add.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_mulmod.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_mulmod_timing.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_points.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_projective_add_point.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_projective_dbl_point.c" />
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_verify_key.c" />
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_i2osp.c" />
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_mgf1.c" />
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_oaep_decode.c" />
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_oaep_encode.c" />
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_os2ip.c" />
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_pss_decode.c" />
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_pss_encode.c" />
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_v1_5_decode.c" />
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_v1_5_encode.c" />
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_decrypt_key.c" />
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_encrypt_key.c" />
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_exptmod.c" />
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_key.c" />
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_make_key.c" />
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_set.c" />
+    <ClCompile Include="libtom\crypt\prngs\chacha20.c" />
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_crypt.c" />
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_done.c" />
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_ivctr32.c" />
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_ivctr64.c" />
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_keystream.c" />
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_memory.c" />
+    <ClCompile Include="libtom\Custom Implementations\Base64 Encode.cpp" />
+    <ClCompile Include="libtom\Custom Implementations\Chacha Setup.cpp" />
+    <ClCompile Include="libtom\Custom Implementations\Multiple Precision Integer Primes.cpp" />
+    <ClCompile Include="libtom\Custom Implementations\Multiple Precision Integer Radix.cpp" />
+    <ClCompile Include="libtom\math\mp_2expt.c" />
+    <ClCompile Include="libtom\math\mp_abs.c" />
+    <ClCompile Include="libtom\math\mp_add.c" />
+    <ClCompile Include="libtom\math\mp_addmod.c" />
+    <ClCompile Include="libtom\math\mp_add_d.c" />
+    <ClCompile Include="libtom\math\mp_and.c" />
+    <ClCompile Include="libtom\math\mp_clamp.c" />
+    <ClCompile Include="libtom\math\mp_clear.c" />
+    <ClCompile Include="libtom\math\mp_clear_multi.c" />
+    <ClCompile Include="libtom\math\mp_cmp.c" />
+    <ClCompile Include="libtom\math\mp_cmp_d.c" />
+    <ClCompile Include="libtom\math\mp_cmp_mag.c" />
+    <ClCompile Include="libtom\math\mp_cnt_lsb.c" />
+    <ClCompile Include="libtom\math\mp_complement.c" />
+    <ClCompile Include="libtom\math\mp_copy.c" />
+    <ClCompile Include="libtom\math\mp_count_bits.c" />
+    <ClCompile Include="libtom\math\mp_cutoffs.c" />
+    <ClCompile Include="libtom\math\mp_div.c" />
+    <ClCompile Include="libtom\math\mp_div_2.c" />
+    <ClCompile Include="libtom\math\mp_div_2d.c" />
+    <ClCompile Include="libtom\math\mp_div_d.c" />
+    <ClCompile Include="libtom\math\mp_dr_is_modulus.c" />
+    <ClCompile Include="libtom\math\mp_dr_reduce.c" />
+    <ClCompile Include="libtom\math\mp_dr_setup.c" />
+    <ClCompile Include="libtom\math\mp_exch.c" />
+    <ClCompile Include="libtom\math\mp_exptmod.c" />
+    <ClCompile Include="libtom\math\mp_expt_n.c" />
+    <ClCompile Include="libtom\math\mp_exteuclid.c" />
+    <ClCompile Include="libtom\math\mp_from_sbin.c" />
+    <ClCompile Include="libtom\math\mp_from_ubin.c" />
+    <ClCompile Include="libtom\math\mp_gcd.c" />
+    <ClCompile Include="libtom\math\mp_get_double.c" />
+    <ClCompile Include="libtom\math\mp_get_i32.c" />
+    <ClCompile Include="libtom\math\mp_get_i64.c" />
+    <ClCompile Include="libtom\math\mp_get_l.c" />
+    <ClCompile Include="libtom\math\mp_get_mag_u32.c" />
+    <ClCompile Include="libtom\math\mp_get_mag_u64.c" />
+    <ClCompile Include="libtom\math\mp_get_mag_ul.c" />
+    <ClCompile Include="libtom\math\mp_grow.c" />
+    <ClCompile Include="libtom\math\mp_init.c" />
+    <ClCompile Include="libtom\math\mp_init_copy.c" />
+    <ClCompile Include="libtom\math\mp_init_i32.c" />
+    <ClCompile Include="libtom\math\mp_init_i64.c" />
+    <ClCompile Include="libtom\math\mp_init_l.c" />
+    <ClCompile Include="libtom\math\mp_init_multi.c" />
+    <ClCompile Include="libtom\math\mp_init_set.c" />
+    <ClCompile Include="libtom\math\mp_init_size.c" />
+    <ClCompile Include="libtom\math\mp_init_u32.c" />
+    <ClCompile Include="libtom\math\mp_init_u64.c" />
+    <ClCompile Include="libtom\math\mp_init_ul.c" />
+    <ClCompile Include="libtom\math\mp_invmod.c" />
+    <ClCompile Include="libtom\math\mp_is_square.c" />
+    <ClCompile Include="libtom\math\mp_kronecker.c" />
+    <ClCompile Include="libtom\math\mp_lcm.c" />
+    <ClCompile Include="libtom\math\mp_log_n.c" />
+    <ClCompile Include="libtom\math\mp_lshd.c" />
+    <ClCompile Include="libtom\math\mp_mod.c" />
+    <ClCompile Include="libtom\math\mp_mod_2d.c" />
+    <ClCompile Include="libtom\math\mp_montgomery_calc_normalization.c" />
+    <ClCompile Include="libtom\math\mp_montgomery_reduce.c" />
+    <ClCompile Include="libtom\math\mp_montgomery_setup.c" />
+    <ClCompile Include="libtom\math\mp_mul.c" />
+    <ClCompile Include="libtom\math\mp_mulmod.c" />
+    <ClCompile Include="libtom\math\mp_mul_2.c" />
+    <ClCompile Include="libtom\math\mp_mul_2d.c" />
+    <ClCompile Include="libtom\math\mp_mul_d.c" />
+    <ClCompile Include="libtom\math\mp_neg.c" />
+    <ClCompile Include="libtom\math\mp_or.c" />
+    <ClCompile Include="libtom\math\mp_pack.c" />
+    <ClCompile Include="libtom\math\mp_pack_count.c" />
+    <ClCompile Include="libtom\math\mp_prime_fermat.c" />
+    <ClCompile Include="libtom\math\mp_prime_frobenius_underwood.c" />
+    <ClCompile Include="libtom\math\mp_prime_miller_rabin.c" />
+    <ClCompile Include="libtom\math\mp_prime_rabin_miller_trials.c" />
+    <ClCompile Include="libtom\math\mp_prime_rand.c" />
+    <ClCompile Include="libtom\math\mp_prime_strong_lucas_selfridge.c" />
+    <ClCompile Include="libtom\math\mp_radix_size.c" />
+    <ClCompile Include="libtom\math\mp_radix_size_overestimate.c" />
+    <ClCompile Include="libtom\math\mp_rand.c" />
+    <ClCompile Include="libtom\math\mp_rand_source.c" />
+    <ClCompile Include="libtom\math\mp_reduce.c" />
+    <ClCompile Include="libtom\math\mp_reduce_2k.c" />
+    <ClCompile Include="libtom\math\mp_reduce_2k_l.c" />
+    <ClCompile Include="libtom\math\mp_reduce_2k_setup.c" />
+    <ClCompile Include="libtom\math\mp_reduce_2k_setup_l.c" />
+    <ClCompile Include="libtom\math\mp_reduce_is_2k.c" />
+    <ClCompile Include="libtom\math\mp_reduce_is_2k_l.c" />
+    <ClCompile Include="libtom\math\mp_reduce_setup.c" />
+    <ClCompile Include="libtom\math\mp_root_n.c" />
+    <ClCompile Include="libtom\math\mp_rshd.c" />
+    <ClCompile Include="libtom\math\mp_sbin_size.c" />
+    <ClCompile Include="libtom\math\mp_set.c" />
+    <ClCompile Include="libtom\math\mp_set_double.c" />
+    <ClCompile Include="libtom\math\mp_set_i32.c" />
+    <ClCompile Include="libtom\math\mp_set_i64.c" />
+    <ClCompile Include="libtom\math\mp_set_l.c" />
+    <ClCompile Include="libtom\math\mp_set_u32.c" />
+    <ClCompile Include="libtom\math\mp_set_u64.c" />
+    <ClCompile Include="libtom\math\mp_set_ul.c" />
+    <ClCompile Include="libtom\math\mp_shrink.c" />
+    <ClCompile Include="libtom\math\mp_signed_rsh.c" />
+    <ClCompile Include="libtom\math\mp_sqrmod.c" />
+    <ClCompile Include="libtom\math\mp_sqrt.c" />
+    <ClCompile Include="libtom\math\mp_sqrtmod_prime.c" />
+    <ClCompile Include="libtom\math\mp_sub.c" />
+    <ClCompile Include="libtom\math\mp_submod.c" />
+    <ClCompile Include="libtom\math\mp_sub_d.c" />
+    <ClCompile Include="libtom\math\mp_to_sbin.c" />
+    <ClCompile Include="libtom\math\mp_to_ubin.c" />
+    <ClCompile Include="libtom\math\mp_ubin_size.c" />
+    <ClCompile Include="libtom\math\mp_unpack.c" />
+    <ClCompile Include="libtom\math\mp_xor.c" />
+    <ClCompile Include="libtom\math\mp_zero.c" />
+    <ClCompile Include="libtom\math\s_mp_add.c" />
+    <ClCompile Include="libtom\math\s_mp_copy_digs.c" />
+    <ClCompile Include="libtom\math\s_mp_div_3.c" />
+    <ClCompile Include="libtom\math\s_mp_div_recursive.c" />
+    <ClCompile Include="libtom\math\s_mp_div_school.c" />
+    <ClCompile Include="libtom\math\s_mp_div_small.c" />
+    <ClCompile Include="libtom\math\s_mp_exptmod.c" />
+    <ClCompile Include="libtom\math\s_mp_exptmod_fast.c" />
+    <ClCompile Include="libtom\math\s_mp_get_bit.c" />
+    <ClCompile Include="libtom\math\s_mp_invmod.c" />
+    <ClCompile Include="libtom\math\s_mp_invmod_odd.c" />
+    <ClCompile Include="libtom\math\s_mp_log.c" />
+    <ClCompile Include="libtom\math\s_mp_log_2expt.c" />
+    <ClCompile Include="libtom\math\s_mp_log_d.c" />
+    <ClCompile Include="libtom\math\s_mp_montgomery_reduce_comba.c" />
+    <ClCompile Include="libtom\math\s_mp_mul.c" />
+    <ClCompile Include="libtom\math\s_mp_mul_balance.c" />
+    <ClCompile Include="libtom\math\s_mp_mul_comba.c" />
+    <ClCompile Include="libtom\math\s_mp_mul_high.c" />
+    <ClCompile Include="libtom\math\s_mp_mul_high_comba.c" />
+    <ClCompile Include="libtom\math\s_mp_mul_karatsuba.c" />
+    <ClCompile Include="libtom\math\s_mp_mul_toom.c" />
+    <ClCompile Include="libtom\math\s_mp_radix_size_overestimate.c" />
+    <ClCompile Include="libtom\math\s_mp_rand_platform.c" />
+    <ClCompile Include="libtom\math\s_mp_sqr.c" />
+    <ClCompile Include="libtom\math\s_mp_sqr_comba.c" />
+    <ClCompile Include="libtom\math\s_mp_sqr_karatsuba.c" />
+    <ClCompile Include="libtom\math\s_mp_sqr_toom.c" />
+    <ClCompile Include="libtom\math\s_mp_sub.c" />
+    <ClCompile Include="libtom\math\s_mp_zero_buf.c" />
+    <ClCompile Include="libtom\math\s_mp_zero_digs.c" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Miscellaneous\Globals.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\HTTP\Client.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\HTTP\HTTP.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\Socket.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Client\Client.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Client\Protocol Handler.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\Winsock Kernel\Address Information.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\Winsock Kernel\Context.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\Winsock.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\Winsock Kernel\Wsk.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\Cache.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\Container.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\Data Stream\Integer.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\Data Stream\Reader.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\Helpers.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Pdb.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Dbi.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Info.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Layouts.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Mapped Block.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Msf Layouts.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Stream.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Symbol Records.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Tpi.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Types\Public Symbol.cpp" />
+    <ClCompile Include="Miscellaneous\Pdb\msf\Types\Structure.cpp" />
+    <ClCompile Include="Miscellaneous\Security\efi.cpp" />
+    <ClCompile Include="Miscellaneous\Security\Hardware Id.cpp" />
+    <ClCompile Include="Miscellaneous\Security\smbios.cpp" />
+    <ClCompile Include="Miscellaneous\Symbols.cpp" />
+    <ClCompile Include="Spoofer\Disk.cpp" />
+    <ClCompile Include="System Calls\Hook.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Change Cipher Specification.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Handshake.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Certificate.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Client Hello.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Client Key Exchange.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Finished.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Crypto\Algorithms.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Crypto\Certificate.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Crypto\Hashes.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Data Stream\Reader.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Data Stream\Stream.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Data Stream\Writer.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Parser\ASN.1 DER\Parser.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Parser\ASN.1 DER\Types.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Parser\Handshake Messages.cpp" />
+    <ClCompile Include="Miscellaneous\Net IO\TLS\TLS Plaintext.cpp" />
+    <ClCompile Include="Utilities\Mutex.cpp" />
+    <ClCompile Include="Utilities\NT\Driver.cpp" />
+    <ClCompile Include="Utilities\NT\Kernel Mode.cpp" />
+    <ClCompile Include="Utilities\NT\Ntoskrnl.cpp" />
+    <ClCompile Include="Utilities\NT\PE.cpp" />
+    <ClCompile Include="Utilities\NT\User Mode.cpp" />
+    <ClCompile Include="Utilities\Obfuscation.cpp" />
+    <ClCompile Include="Utilities\Scanner.cpp" />
+    <ClCompile Include="Utilities\Strings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Configuration.hpp" />
+    <ClInclude Include="libc\Memory.hpp" />
+    <ClInclude Include="libc\stdlib\At Exit.hpp" />
+    <ClInclude Include="libc\stdlib\Exceptions\Exceptions.hpp" />
+    <ClInclude Include="Miscellaneous\Globals.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\HTTP\Client.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\HTTP\HTTP.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\Socket.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Client\Client.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Client\Protocol Handler.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\Winsock Kernel\Address Information.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\Winsock Kernel\Context.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\Winsock.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\Winsock Kernel\Wsk.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\Cache.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\Container.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\Data Stream\Integer.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\Data Stream\Reader.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\Data Stream\Stream.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\Helpers.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Leaf Type.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Pdb.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Record.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Dbi.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Info.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Layouts.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Mapped Block.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Msf Layouts.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Stream.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Symbol Records.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Tpi.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Symbol Type.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Type Index.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Array.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Bit Field.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Enum.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Public Symbol.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Structure.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Union.hpp" />
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Variable.hpp" />
+    <ClInclude Include="Miscellaneous\Security\efi.hpp" />
+    <ClInclude Include="Miscellaneous\Security\Hardware Id.hpp" />
+    <ClInclude Include="Miscellaneous\Security\smbios.hpp" />
+    <ClInclude Include="Spoofer\Disk.hpp" />
+    <ClInclude Include="System Calls\Hook.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Array.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Certificate Store.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Common Types.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Concepts.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Configuration.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Alerts\Alert Description.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Alerts\Alert Level.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Alerts\Alert.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Change Cipher Specification.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Content Type.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Compression Methods.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Application Layer Protocol Negotiation.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Cookie.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Extension Type.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Extension.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Extensions.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Key Share.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Negotiated Groups.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Server Name Indication.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Signature Algorithms.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Supported Versions.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Handshake Type.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Handshake.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Certificate Request.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Certificate Verify.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Certificate.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Client Hello.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Client Key Exchange.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Encrypted Extensions.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\End of Early Data.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Finished.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Key Update.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Message Hash.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\New Session Ticket.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Server Hello Done.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Server Hello.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Server Key Exchange.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Random.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Session Id.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Signature Hash Algorithm.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Algorithms.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Certificate.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Ciphers.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Hash Algorithm.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Hashes.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Named Groups.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Signature Algorithm.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Signature Scheme.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Data Stream\Byte Order.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Data Stream\Reader.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Data Stream\Stream.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Data Stream\Writer.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Parser\ASN.1 DER\Parser.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Parser\ASN.1 DER\Types.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Parser\Parser.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Protocol Version.hpp" />
+    <ClInclude Include="Miscellaneous\Net IO\TLS\TLS Plaintext.hpp" />
+    <ClInclude Include="Utilities\Mutex.hpp" />
+    <ClInclude Include="Utilities\NT\Definitions.hpp" />
+    <ClInclude Include="Utilities\NT\NT.hpp" />
+    <ClInclude Include="Utilities\Obfuscation.hpp" />
+    <ClInclude Include="Utilities\Printer.hpp" />
+    <ClInclude Include="Utilities\Scanner.hpp" />
+    <ClInclude Include="Utilities\Strings.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="libc\stdlib\Exceptions\Exceptions.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\dependencies\libraries\Code Virtualizer\VirtualizerSDKCustomVmMacros.asm" />
+    <MASM Include="..\dependencies\libraries\Code Virtualizer\VirtualizerSDKMacros.asm" />
+    <MASM Include="..\dependencies\libraries\Code Virtualizer\VM_FISH_LITE.asm" />
+    <MASM Include="..\dependencies\libraries\Code Virtualizer\VM_TIGER_LONDON.asm" />
+    <MASM Include="libc\Intrinsics.asm" />
+    <MASM Include="System Calls\Helper.asm" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Driver Files">
+      <UniqueIdentifier>{8E41214B-6785-4CFE-B992-037D68949A14}</UniqueIdentifier>
+      <Extensions>inf;inv;inx;mof;mc;</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Globals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\NT\Driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Scanner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\NT\Ntoskrnl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\NT\PE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\NT\Kernel Mode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spoofer\Disk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System Calls\Hook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\NT\User Mode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libc\Memory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libc\stdlib\At Exit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libc\stdlib\Exceptions\Assertions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libc\stdlib\Exceptions\Exceptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libc\stdlib\STD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Security\smbios.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Security\efi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Strings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\Winsock Kernel\Address Information.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\Winsock Kernel\Context.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\Winsock Kernel\Wsk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Mutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\Socket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\Winsock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\ciphers\aes\aes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_add_aad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_add_iv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_done.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_gf_mult.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_mult_h.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_process.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\encauth\gcm\gcm_reset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\helper\hash_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\helper\hash_memory_multi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\sha1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha224.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha256.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha384.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha512.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha512_224.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\sha2\sha512_256.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\hashes\sha3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_done.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_memory_multi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\mac\hmac\hmac_process.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\math\ltm_desc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\math\multi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\math\rand_bn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\math\rand_prime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_cipher_descriptor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_cipher_is_valid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_hash_descriptor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_hash_is_valid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_inits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_ltc_mp_descriptor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_prng_descriptor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_prng_is_valid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_register_cipher.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_register_hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_register_prng.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_unregister_cipher.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_unregister_hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\crypt\crypt_unregister_prng.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\mem_neq.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\zeromem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\asn1\oid\pk_oid_str.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_free.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_get_key.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_get_size.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_set_curve.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_set_curve_internal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_set_key.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_shared_secret.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_sizes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_export_point.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_import_point.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_is_point.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_is_point_at_infinity.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_mul2add.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_mulmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_mulmod_timing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_points.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_projective_add_point.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_projective_dbl_point.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ltc_ecc_verify_key.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_i2osp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_mgf1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_oaep_decode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_oaep_encode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_os2ip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_pss_decode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_pss_encode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_v1_5_decode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\pkcs1\pkcs_1_v1_5_encode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_decrypt_key.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_encrypt_key.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_exptmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_key.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_make_key.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\rsa\rsa_set.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\prngs\chacha20.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_crypt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_done.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_ivctr32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_ivctr64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_keystream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\stream\chacha\chacha_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_2expt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_abs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_add.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_addmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_add_d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_and.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_clamp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_clear.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_clear_multi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_cmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_cmp_d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_cmp_mag.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_cnt_lsb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_complement.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_copy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_count_bits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_cutoffs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_div.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_div_2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_div_2d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_div_d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_dr_is_modulus.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_dr_reduce.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_dr_setup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_exch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_exptmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_expt_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_exteuclid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_from_sbin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_from_ubin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_gcd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_get_double.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_get_i32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_get_i64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_get_l.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_get_mag_u32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_get_mag_u64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_get_mag_ul.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_grow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_copy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_i32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_i64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_l.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_multi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_set.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_size.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_u32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_u64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_init_ul.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_invmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_is_square.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_kronecker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_lcm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_log_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_lshd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_mod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_mod_2d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_montgomery_calc_normalization.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_montgomery_reduce.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_montgomery_setup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_mul.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_mulmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_mul_2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_mul_2d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_mul_d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_neg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_or.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_pack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_pack_count.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_prime_fermat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_prime_frobenius_underwood.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_prime_miller_rabin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_prime_rabin_miller_trials.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_prime_rand.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_prime_strong_lucas_selfridge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_radix_size.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_radix_size_overestimate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_rand.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_rand_source.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_reduce.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_reduce_2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_reduce_2k_l.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_reduce_2k_setup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_reduce_2k_setup_l.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_reduce_is_2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_reduce_is_2k_l.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_reduce_setup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_root_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_rshd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_sbin_size.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_set.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_set_double.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_set_i32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_set_i64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_set_l.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_set_u32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_set_u64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_set_ul.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_shrink.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_signed_rsh.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_sqrmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_sqrt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_sqrtmod_prime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_sub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_submod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_sub_d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_to_sbin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_to_ubin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_ubin_size.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_unpack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_xor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\mp_zero.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_add.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_copy_digs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_div_3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_div_recursive.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_div_school.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_div_small.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_exptmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_exptmod_fast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_get_bit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_invmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_invmod_odd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_log_2expt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_log_d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_montgomery_reduce_comba.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_mul.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_mul_balance.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_mul_comba.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_mul_high.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_mul_high_comba.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_mul_karatsuba.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_mul_toom.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_radix_size_overestimate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_rand_platform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_sqr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_sqr_comba.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_sqr_karatsuba.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_sqr_toom.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_sub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_zero_buf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\math\s_mp_zero_digs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Change Cipher Specification.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Handshake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Certificate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Client Hello.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Client Key Exchange.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Finished.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Crypto\Algorithms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Crypto\Certificate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Crypto\Hashes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Data Stream\Reader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Data Stream\Stream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Data Stream\Writer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Parser\Handshake Messages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\TLS Plaintext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Parser\ASN.1 DER\Parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Parser\ASN.1 DER\Types.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\misc\base64\base64_decode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\pk\ecc\ecc_make_key.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Client\Protocol Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\HTTP\Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\HTTP\HTTP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Net IO\TLS\Client\Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\Custom Implementations\Chacha Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\Custom Implementations\Multiple Precision Integer Radix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\Custom Implementations\Multiple Precision Integer Primes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\Custom Implementations\Base64 Encode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libtom\crypt\ciphers\aes\aes_tab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Obfuscation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\Cache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\Container.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\Helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Pdb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Dbi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Layouts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Mapped Block.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Msf Layouts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Stream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Symbol Records.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Streams\Tpi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Types\Public Symbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\msf\Types\Structure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\Data Stream\Integer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Pdb\Data Stream\Reader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Security\Hardware Id.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\Symbols.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Configuration.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Globals.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\NT\NT.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\NT\Definitions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Scanner.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spoofer\Disk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System Calls\Hook.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libc\Memory.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libc\stdlib\At Exit.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libc\stdlib\Exceptions\Exceptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Security\smbios.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Security\efi.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Strings.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\Winsock Kernel\Address Information.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\Winsock Kernel\Context.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\Winsock Kernel\Wsk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\Socket.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Mutex.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\Winsock.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\NT\PDB.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Common Types.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Concepts.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Configuration.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Alerts\Alert Description.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Alerts\Alert Level.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Alerts\Alert.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Change Cipher Specification.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Content Type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Compression Methods.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Application Layer Protocol Negotiation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Cookie.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Extension Type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Extension.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Extensions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Key Share.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Negotiated Groups.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Server Name Indication.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Signature Algorithms.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Extensions\Supported Versions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Handshake Type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Handshake.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Certificate Request.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Certificate Verify.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Certificate.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Client Hello.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Client Key Exchange.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Encrypted Extensions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\End of Early Data.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Finished.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Key Update.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Message Hash.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\New Session Ticket.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Server Hello Done.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Server Hello.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Messages\Server Key Exchange.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Random.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Session Id.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Content\Handshakes\Signature Hash Algorithm.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Algorithms.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Certificate.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Ciphers.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Hash Algorithm.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Hashes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Named Groups.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Signature Algorithm.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Crypto\Signature Scheme.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Data Stream\Byte Order.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Data Stream\Reader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Data Stream\Stream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Data Stream\Writer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Parser\Parser.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Protocol Version.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\TLS Plaintext.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Parser\ASN.1 DER\Parser.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Parser\ASN.1 DER\Types.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Certificate Store.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Printer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Client\Client.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\TLS\Client\Protocol Handler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\HTTP\Client.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Net IO\HTTP\HTTP.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Obfuscation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\Cache.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\Container.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\Helpers.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Leaf Type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Pdb.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Record.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Dbi.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Info.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Layouts.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Mapped Block.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Msf Layouts.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Stream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Symbol Records.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Streams\Tpi.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Symbol Type.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Type Index.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Bit Field.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Enum.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Public Symbol.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Structure.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Union.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types\Variable.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\msf\Types.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\Data Stream\Integer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\Data Stream\Reader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Pdb\Data Stream\Stream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\Security\Hardware Id.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="System Calls\Helper.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="..\dependencies\libraries\Code Virtualizer\VirtualizerSDKCustomVmMacros.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="..\dependencies\libraries\Code Virtualizer\VirtualizerSDKMacros.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="..\dependencies\libraries\Code Virtualizer\VM_FISH_LITE.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="..\dependencies\libraries\Code Virtualizer\VM_TIGER_LONDON.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="libc\Intrinsics.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libc\stdlib\Exceptions\Exceptions.asm">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+</Project>
